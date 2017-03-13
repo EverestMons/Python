@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>edit</title>
+  </head>
+  <body>
+    <h1> Make Changes To:</h1>
+    <h3 style = color:blue>{{one_friend['first_name']}} {{one_friend['last_name']}}</h3>
+    <form class="" action="/update/{{one_friend['id']}}" method="POST">
+      <h4 >
+        First Name: <br />
+      </h4>
+      <input type="text" name="update_fname" value="{{one_friend['first_name']}}"><br />
+      <h4>
+        Last Name: <br />
+      </h4>
+      <input type="text" name="update_lname" value="{{one_friend['last_name']}}"><br />
+      <h4>
+        Email: <br />
+      </h4>
+      <input type="text" name="update_email" value="{{one_friend['email']}}"><br />
+      <br />
+      <hr />
+      <input type="submit" name="" value="Make Changes">
+    </form>
+  </body>
+</html>

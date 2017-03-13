@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>success</title>
+  </head>
+  <body>
+    <form action='/delete'>
+      <input type="submit" name="delete" value="Delete User">
+    </form>
+    <h1> Here are the registered emails!</h1>
+    {% for people in all_people %}
+    <p>
+      Name: {{people['name']}}
+    </p>
+    <p>
+      Email: {{people['email']}}
+    </p>
+    <hr />
+    {% endfor %}
+  </body>
+</html>
+
+
+
+
+
+<!-- {{ all_users }} -->
+<!-- <h1>These are all my friends!</h1> -->
+<!-- with all the data we can then construct a more structured output -->
+<!-- {% for poo in all_users: %}
+   <p>ID: {{ poo['id'] }}</p>
+   <p>First Name: {{ poo['first_name'] }}</p>
+   <p>Last Name: {{ poo['last_name'] }}</p>
+   <p>Occupation: {{ poo['occupation'] }}</p>
+   <p>Created At: {{poo['created_at']}} </p>
+   <p>Updated At: {{poo['updated_at']}}</p>
+   <hr />
+{% endfor %} -->

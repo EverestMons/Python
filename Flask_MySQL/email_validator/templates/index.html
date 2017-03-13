@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>email_val</title>
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+    <form action="/process" method="post">
+      <p>
+        Name:
+      </p>
+      <input type="text" name="html_name" value=""><br />
+      <p>
+        Email:
+      </p>
+      <input type="text" name="html_email" value=""><br />
+      <input type="submit" name="" value="submit">
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+<!-- {{ all_users }} -->
+<!-- <h1>These are all my friends!</h1> -->
+<!-- with all the data we can then construct a more structured output -->
+<!-- {% for poo in all_users: %}
+   <p>ID: {{ poo['id'] }}</p>
+   <p>First Name: {{ poo['first_name'] }}</p>
+   <p>Last Name: {{ poo['last_name'] }}</p>
+   <p>Occupation: {{ poo['occupation'] }}</p>
+   <p>Created At: {{poo['created_at']}} </p>
+   <p>Updated At: {{poo['updated_at']}}</p>
+   <hr />
+{% endfor %} -->
