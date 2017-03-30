@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>pagge</title>
+  </head>
+  <body>
+    <h1> {{playlist.name}}</h1>
+    {% for m in messages %}
+    <p>{{m}}</p>
+    {% endfor %}
+    <form class="" action="{% url pytunes:add_song playlist_id=playlist.id %}" method="post">
+      <label for="song_name">Enter Song Name:</label>
+      <input type="text" name="song_name" value="">
+      <input type="submit" value="Add">
+      {% csrf_token %}
+    </form>
+    <table>
+      <tr>
+        <th>Song Name</th>
+        <th>Play Count</th>
+        <th>Date Created</th>
+      </tr>
+      <tr>
+        {% for s in song_name %}
+        <td>{{s.name}}</td>
+        <td>{{s.created_at}}</td>
+      </tr>
+        {% endfor %}
+    </table>
+  </body>
+</html>

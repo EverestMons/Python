@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>addbook</title>
+  </head>
+  <body>
+    <h3>Add a book:</h3>
+    <form class="" action="bookPage" method="post">
+      <label for="title">Title:</label><br />
+      <input type="text" name="bookTitle" value=""><br />
+      <label for="title">Author:</label><br />
+      <input type="text" name="bookAuthor" value=""><br />
+      <label for="bookReview">Review:</label><br />
+      <input type="textspace" name="bookReview" value=""><br />
+      <label for="bookRating">Rating</label>
+      <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select><br />
+      <hr />
+      <input type="Submit" name="" value="Add Book to Library">
+      {% csrf_token %}
+    </form>
+  </body>
+</html>

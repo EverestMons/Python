@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>books</title>
+  </head>
+  <body>
+    <p>
+      Welcome to the community {{email}}!
+    </p>
+    <p>
+      <a href="{% url 'books:addbook' %}">Link to add a book</a>
+    </p>
+    <h3>Recent book reviews:</h3>
+      {% for book in all_books%}
+      <h3>
+        {{book.title}}<br />
+      </h3>
+      {% endfor %}
+    </table>
+
+  </body>
+</html>

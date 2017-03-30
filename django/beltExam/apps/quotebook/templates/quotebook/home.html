@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>home</title>
+</head>
+
+<body>
+
+
+    <form class="" action="{% url 'quotebook:addquote' %}" method="post">
+        <label for="">Add Quote:</label><br />
+        <input type="text" name="quote" value=""><br />
+        <label for="">Author:</label><br />
+        <input type="text" name="author" value=""><br />
+        <input type="submit" name="" value="Submit"> {% csrf_token %}
+    </form>
+</body>
+
+</html>

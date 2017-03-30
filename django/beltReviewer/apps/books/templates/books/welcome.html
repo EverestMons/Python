@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>Login</h3>
+    <form class="" action="/login" method="post">
+      <label for="loginEmail">Email:</label><br />
+      <input type="text" name="loginEmail" value=""><br />
+      <label for="loginPassword">Password:</label><br />
+      <input type="text" name="loginPassword" value=""><br />
+      <label for="Submit"></label>
+      {% csrf_token %}
+      <input type="Submit" name="" value="Login">
+    </form>
+    <hr />
+    <h3>Register</h3>
+    <form class="" action="/registerFormAction" method="post">
+      <label for="registerFirst">First:</label><br />
+      <input type="text" name="registerFirst" value=""><br />
+      <label for="registerLast">Last:</label><br />
+      <input type="text" name="registerLast" value=""><br />
+      <label for="registerEmail">Email:</label><br />
+      <input type="text" name="registerEmail" value=""><br />
+      <label for="registerPassword">Password:</label><br />
+      <input type="password" name="registerPassword" value=""><br />
+      <label for="registerPasswordConfirm">Password Confirm:</label><br />
+      <input type="password" name="registerPasswordConfirm" value=""><br />
+      <label for="Submit"></label>
+      {% csrf_token %}
+      <input type="Submit" name="" value="Register">
+    </form>
+  </body>
+</html>
